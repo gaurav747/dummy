@@ -1,0 +1,28 @@
+<div id='container'>
+  <div id='form-wrapper'>
+    <form [formGroup]='contactForm' name="contact" id='contact-form' method="post" (ngSubmit)="onSubmit()">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style='display: none;'>
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <h2>Contact Me!</h2>
+      <div id='form-row-wrapper'>
+      <div class='form-row'>
+        <label>Your Name: </label><input type='text' name="name" formControlName="name" required/>
+      </div>
+      <div class='form-row'>
+        <label>Email Address: </label><input type='email' name="email" formControlName="email" required/>
+      </div>
+      <div class='form-row'>
+        <label>A Favorite Work of Art: </label><input type='text' name="art" formControlName="art"/>
+      </div>
+      <div class='form-row'>
+        <label>Your Message:</label><textarea id='message' name="message" formControlName="message" required></textarea>
+      </div>
+      <div id='button-row'>
+        <button id='submit-button' type='submit'>Send!</button>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>

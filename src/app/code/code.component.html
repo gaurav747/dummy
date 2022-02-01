@@ -1,0 +1,19 @@
+<div id='code-wrapper'>
+  <div id='container'>
+    <div id='page-description'>
+      <p id='p-description'>I love developing applications that help make access to knowledge and acquiring skills more equitable, and the projects listed here reflect that passion. I've been developing on the web since 2018, making everything from apps for music students to "On This Day" history calendars to the website you are using right now!<br/><br/>My development skills are primarily on the front-end, and I am comfortable developing applications with ReactJS, React Native, Angular, and jQuery. I also have skills in SQL, Python, and Python's data-handling libraries (Pandas, MatPlotLib, etc.)<br/><br/>You can see all of my GitHub repositories<a href='https://github.com/huntzinger92' target='_blank' class="description-link">here</a>.</p>
+    </div>
+    <div *ngFor="let project of code_projects" class="entry">
+      <div class='entry-header'>
+        <hr class='line-top'/>
+        <h3>{{project.title}}</h3>
+        <hr class='line-bottom'/>
+      </div>
+      <img src={{project.imgSrc}} alt={{project.imgAlt}} id={{project.imgId}} class="entry-img"/>
+      <div class="entry-notes">
+        <div [innerHtml]="project.description"></div>
+        <a href={{project.link}} target="_blank" class="description-link">{{project.linkText}}</a>
+      </div>
+    </div>
+  </div>
+</div>
